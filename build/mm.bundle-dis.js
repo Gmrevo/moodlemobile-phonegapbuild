@@ -11808,13 +11808,25 @@ angular.module('mm.core.login', [])
     })
     .state('mm_login.sites', {
         url: '/sites',
-        templateUrl: 'core/components/login/templates/sites.html',
-        controller: 'mmLoginSitesCtrl',
-        onEnter: ["$mmLoginHelper", "$mmSitesManager", function($mmLoginHelper, $mmSitesManager) {
+         templateUrl: 'core/components/login/templates/reconnect.html',
+        controller: 'mmLoginReconnectCtrl',
+        cache: false,
+        params: {
+            siteurl: '',
+            username: '',
+            infositeurl: '',
+            siteid: '',
+            statename: null, 
+            stateparams: null,
+            siteconfig: null
+        }
+       /* templateUrl: 'core/components/login/templates/site.html',
+        controller: 'mmLoginSiteCtrl',*/
+       /* onEnter: ["$mmLoginHelper", "$mmSitesManager", function($mmLoginHelper, $mmSitesManager) {
             $mmSitesManager.hasNoSites().then(function() {
                 $mmLoginHelper.goToAddSite();
             });
-        }]
+        }]*/
     })
     .state('mm_login.site', {
         url: '/site',
