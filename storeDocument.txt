@@ -1,0 +1,7 @@
+Keystore  :
+alias name: maldives
+password: m@ldive$
+First & Lastname: Maldives Business School
+version no: 1.0
+
+Is CN=Maldives Bussiness School, OU=Maldives Bussiness School, O=Maldives Business School, L=Maldives, ST=Maldives, C=MV correct?
